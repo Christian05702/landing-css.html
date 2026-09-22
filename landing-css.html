@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aether Sound - Pure CSS Showcase</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --main-dark: #1a3b4c; --accent-gold: #f4a261; --neutral-light: #fefefe; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Work Sans', sans-serif; background-color: var(--neutral-light); color: #333; line-height: 1.7; }
+        
+        nav { background: rgba(26, 59, 76, 0.95); backdrop-filter: blur(8px); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 1000; border-bottom: 2px solid var(--accent-gold); }
+        nav .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: auto; }
+        nav .brand { color: white; text-decoration: none; font-weight: 700; font-size: 1.4rem; }
+        nav ul { list-style: none; display: flex; gap: 25px; }
+        nav a:not(.brand) { color: white; text-decoration: none; font-weight: 600; position: relative; padding-bottom: 3px; }
+        nav a:not(.brand)::after { content: ''; display: block; width: 0; height: 2px; background: var(--accent-gold); transition: width .3s; position: absolute; bottom: 0; left: 0; }
+        nav a:hover::after { width: 100%; }
+
+        .hero-split { display: grid; grid-template-columns: 1fr 1fr; min-height: calc(100vh - 80px); }
+        
+        .hero-text { background-color: var(--main-dark); color: white; padding: 80px 10%; display: flex; flex-direction: column; justify-content: center; }
+        .hero-text h1 { font-family: 'Libre Baskerville', serif; font-size: 3rem; margin-bottom: 20px; color: var(--neutral-light); line-height: 1.2; }
+        .hero-text p { font-size: 1.15rem; color: #d0d0d0; margin-bottom: 35px; }
+        
+        .btn-custom { display: inline-block; padding: 15px 35px; background-color: var(--accent-gold); color: white; text-decoration: none; font-weight: 700; border-radius: 4px; border: 2px solid transparent; transition: all 0.3s; width: fit-content; }
+        .btn-custom:hover { background-color: transparent; border-color: var(--accent-gold); color: var(--accent-gold); }
+
+        .hero-visual { background: linear-gradient(135deg, #2c4c5e, #1a3b4c); display: flex; align-items: center; justify-content: center; padding: 40px; position: relative; }
+        .visual-card { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); padding: 40px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); text-align: center; color: white; max-width: 400px; }
+        .visual-card h3 { font-size: 1.8rem; color: var(--accent-gold); margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="brand">CJS Space</a>
+      <ul>
+        <li><a href="index.html">Personal Space</a></li>
+        <li><a href="landing-css.html">Custom CSS Showcase</a></li>
+        <li><a href="landing-bootstrap.html">Bootstrap Design</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="hero-split">
+    <div class="hero-text">
+      <h1>Pure Audio Precision. Zero Distractions.</h1>
+      <p>Ipinakikilala ang <strong>Aether Sound Studio Pro</strong> — studio-grade wireless headphones na idinisenyo para sa mga programmer at creators na kailangan ng rurok ng pokus at malinaw na tunog.</p>
+      <a href="#" class="btn-custom">Pre-Order Now</a>
+    </div>
+    
+    <div class="hero-visual">
+      <div class="visual-card">
+        <h3>Aether Pro X</h3>
+        <p style="margin-bottom: 15px;">Active Noise Canceling | 50-Hour Battery Life | Lossless Spatial Audio</p>
+        <span style="background: var(--accent-gold); color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem;">Pure CSS Layout</span>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
